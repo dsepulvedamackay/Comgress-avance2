@@ -1,0 +1,22 @@
+{
+  "eventos": [
+    {
+      "nombre": "Evento1",
+      "descripcion": "Descripción evento",
+      "cupos": "30",
+      "lugar": "UFRO, Temuco"
+    },
+    {
+      "nombre": "Evento2",
+      "descripcion": "Descripción evento",
+      "cupos": "400",
+      "lugar": "Inacap, Temuco"
+    },
+    {
+      "nombre": "Evento3",
+      "descripcion": "Descripción evento",
+      "cupos": "700",
+      "lugar": "Pitrufquen"
+    }
+  ]
+}

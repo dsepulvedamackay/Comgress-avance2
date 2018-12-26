@@ -1,0 +1,1 @@
+Cloné una semilla de angular que tenia herramientas para servir el cliente como gulp y para la gestión de dependencias como bower.
