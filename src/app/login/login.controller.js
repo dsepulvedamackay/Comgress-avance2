@@ -6,13 +6,18 @@
         .controller('LoginController', LoginController);
 
     /** @ngInject */
-    function LoginController($http, $uibModal) {
+    function LoginController($http, $state) {
         var vm = this;
+        vm.autenticado = true;
 
-        activate();
-
-        function activate() {
-
+        console.log($state);
+        vm.autenticar = function() {
+          if (vm.usuario == "user" && vm.contrasena == "password") {
+            vm.autenticado = true;
+            $state.go("home");
+          } else {
+            vm.autenticado = false;
+          }
         }
     }
 })();

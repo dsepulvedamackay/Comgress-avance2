@@ -5,19 +5,22 @@
   </div>
   <form class="form flex-container flex-column flex-center">
     <div>
-      <label class="">Usuario</label>
+      <label>Usuario</label>
     </div>
     <div>
-      <input id="input-usuario" />
+      <input ng-model="vm.usuario" id="input-usuario" />
     </div>
     <div>
-      <label class="">Contraseña</label>
+      <label>Contraseña</label>
     </div>
     <div>
-      <input id="input-contraseña" />
+      <input ng-model="vm.contrasena" id="input-contraseña" />
+    </div>
+    <div>
+      <p ng-show="!vm.autenticado" class="warning">Usuario o contraseña incorrecta</p>
     </div>
     <div class="button-container">
-      <button class="btn btn-md">Ingresar</button>
+      <button class="btn btn-md" ng-click="vm.autenticar()">Ingresar</button>
     </div>
   </form>
 </section>
