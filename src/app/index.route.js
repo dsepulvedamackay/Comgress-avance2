@@ -19,9 +19,15 @@
                 templateUrl: "app/evento/evento.html",
                 controller: 'EventoController',
                 controllerAs: 'vm'
+            })
+            .state('login', {
+                url: "/login",
+                templateUrl: "app/login/login.html",
+                controller: 'LoginController',
+                controllerAs: 'vm'
             });
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/login');
     }
 
 })();
