@@ -6,5 +6,7 @@
         .controller('MainController', MainController);
 
     /** @ngInject */
-    function MainController() {}
+    function MainController($http, $scope, $rootScope) {
+      var vm = this;
+    }
 })();

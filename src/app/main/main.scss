@@ -1,0 +1,21 @@
+.app-box {
+  padding: 0px;
+  width: 100%;
+}
+
+#mapa1 {
+  margin-top: 10px;
+  width: 995px;
+  height: 647px;
+}
+
+.map-layers-list {
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 12px -4px rgba(135,133,135,0.87);
+}

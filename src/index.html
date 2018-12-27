@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="height-max flex-container" ng-app="angularSeedApp">
+<html style="height: 100%;" ng-app="angularSeedApp">
 
 <head>
     <meta charset="utf-8">
@@ -19,12 +19,23 @@
     <!-- endbuild -->
 </head>
 
-<body class="flex-item flex-container flex-column">
+<body style="height: 100%;">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <div class="flex-container flex-item flex-row flex-center" ui-view></div>
+
+    <div class="flex-column container-fluid" style="height: 100%">
+      <div class="flex-row flex-item row">
+        <div class="flex-column flex-item col-xs-12 container">
+          <div class="flex-row flex-item row">
+            <div class="no-padding col-xs-3 flex-column">
+              <left-panel class="flex-column flex-item"/>
+            </div>
+            <div class="flex-column col-xs-9" ui-view></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->

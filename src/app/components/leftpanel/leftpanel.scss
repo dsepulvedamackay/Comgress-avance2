@@ -1,0 +1,30 @@
+.leftpanel {
+  background: #318b05;
+  opacity: 0.8;
+  -webkit-box-shadow: 11px 0px 12px -4px rgba(135,133,135,0.87);
+  -moz-box-shadow: 11px 0px 12px -4px rgba(135,133,135,0.87);
+  box-shadow: 11px 0px 12px -4px rgba(135,133,135,0.87);
+  padding-top: 30px;
+}
+
+.list-item {
+  padding: 10px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
+
+  :hover {
+    background: red;
+  }
+  h3 {
+    margin: 15px;
+    color: white;
+    font-size: 20px;
+    padding-left: 25px;
+  }
+}
+
+.brand-logo {
+  margin-bottom: 40px;
+}
