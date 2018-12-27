@@ -6,23 +6,23 @@
         .controller('EventoController', EventoController);
 
     /** @ngInject */
-    function EventoController($http, $uibModal) {
+    function EventoController($http, $state) {
         var vm = this;
-        vm.options = {
-            templateUrl: "app/evento/crearEvento.html"  
-        }
-        vm.openModal = function() {
-            $uibModal.open(vm.options);
-        }
 
         activate();
 
         function activate() {
             $http.get('app/eventos.json').success(function(response) {
-                vm.eventos = response.eventos;
-                console.log(vm.eventos);
-                
+                angular.forEach(response.eventos, function(evento) {
+                  if (evento.id == $state.params.eventoId) {
+                    vm.evento = evento;
+                  }
+                });
             });
+        }
+
+        vm.botonAtras = function() {
+          $state.go('eventos');
         }
     }
 })();

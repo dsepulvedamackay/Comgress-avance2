@@ -1,21 +1,6 @@
-<div>
-  <div ng-repeat="evento in vm.eventos" class="row">
-    <div class="col-sm-10 col-md-10" style="margin-left: 3%; margin-bottom: 3%;">
-      <div class="thumbnail" style="display: float left;">
-        <!--<img src='{{evento.foto}}'  alt="evento1">-->
-        <div class="caption">
-          <h3>{{evento.nombre}}</h3>
-          <p>{{evento.descripcion}}</p>
-          <p style="color: rgb(109, 109, 243);"><b>{{evento.cupos}} cupos</b></p>
-          <p><i>{{evento.lugar}}</i></p>
-          <p>
-            <a href="#" class="btn btn-primary" role="button">Button</a>
-            </p>
-        </div>
-      </div>
-    </div>
-</div>
-<div class="row">
-  <button ng-click="vm.openModal()" class="btn btn-primary btn-lg">Crear evento</button>
-</div>
+<div class="vista-evento flex-item flex-item">
+  <h1>{{vm.evento.nombre}}</h1>
+  <p>{{vm.evento.descripcion}}</p>
+  <p>{{vm.evento.lugar}}</p>
+  <button class="btn btn-default" ng-click="vm.botonAtras()">Atrás</button>
 </div>

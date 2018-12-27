@@ -1,0 +1,32 @@
+<div class="vista-evento flex-item flex-item">
+  <div class="carta-evento container-fluid" ng-repeat="evento in vm.eventos">
+    <div class="no-margin row">
+      <div class="imagen-evento col-xs-4">
+      </div>
+      <div class="col-xs-8">
+        <div>
+          <div class="caption">
+            <h3 ui-sref="evento({ eventoId: evento.id })">{{evento.nombre}}</h3>
+            <p>{{evento.descripcion}}</p>
+            <p style="color: rgb(109, 109, 243);"><b>{{evento.cupos}} cupos</b></p>
+            <p><i>{{evento.lugar}}</i></p>
+            <p ng-show="!evento.usuarioUnido">
+              <button href="#" class="btn btn-primary" ng-click="evento.usuarioUnido = true" role="button">Unirse</button>
+            </p>
+            <div class="evento-botonera">
+              <span ng-show="evento.usuarioUnido" style="line-height: 33px;" class="text-success">
+                ¡Te has unido a este evento!
+              </span>
+              <button ng-show="evento.usuarioUnido" ng-click="evento.usuarioUnido = false" class="btn btn-link">
+                Deshacer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div>
+  <button ng-click="vm.openModal()" class="btn btn-primary btn-lg">Crear evento</button>
+</div>
+</div>

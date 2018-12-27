@@ -1,0 +1,25 @@
+.carta-evento {
+  border: 1px solid grey;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.vista-evento {
+  overflow-y: auto;
+}
+
+.imagen-evento {
+  background-color: grey;
+  height: 200px;
+}
+
+.evento-botonera {
+  display: flex;
+}
+
+.nuevo-evento {
+  .row:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

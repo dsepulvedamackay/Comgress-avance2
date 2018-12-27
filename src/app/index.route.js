@@ -14,10 +14,10 @@
                 controller: 'MainController',
                 controllerAs: 'vm'
             })
-            .state('evento', {
-                url: "/evento",
-                templateUrl: "app/evento/evento.html",
-                controller: 'EventoController',
+            .state('eventos', {
+                url: "/eventos",
+                templateUrl: "app/eventos/eventos.html",
+                controller: 'EventosController',
                 controllerAs: 'vm'
             })
             .state('login', {
@@ -25,7 +25,14 @@
                 templateUrl: "app/login/login.html",
                 controller: 'LoginController',
                 controllerAs: 'vm'
+            })
+            .state('evento', {
+                url: "/evento/{eventoId}",
+                templateUrl: "app/evento/evento.html",
+                controller: 'EventoController',
+                controllerAs: 'vm'
             });
+
 
         $urlRouterProvider.otherwise('/');
     }
